@@ -1,6 +1,6 @@
 <script setup>
-import CreatePoolButton from '@/components/CreatePoolButton.vue';
-import EnterWithCodeButton from '@/components/EnterWithCodeButton.vue';
+import CreatePoolModal from '@/components/CreatePoolModal.vue';
+import EnterWithCodeModal from '@/components/EnterWithCodeModal.vue';
 import ProjectLogo from '@/components/ProjectLogo.vue';
 </script>
 
@@ -23,8 +23,8 @@ import ProjectLogo from '@/components/ProjectLogo.vue';
       </p>
 
       <div class="buttons">
-        <EnterWithCodeButton />
-        <CreatePoolButton />
+        <EnterWithCodeModal />
+        <CreatePoolModal />
       </div>
     </section>
 
