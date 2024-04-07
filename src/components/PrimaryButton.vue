@@ -3,27 +3,24 @@ defineProps({
   text: {
     type: String,
     required: true
-  },
-  onClick: {
-    type: Function,
-    required: true
   }
 })
 </script>
 
 <template>
-  <button @click="onClick()">
+  <button>
     <span>{{ text }}</span>
   </button>
 </template>
 
 <style scoped>
 button {
+  flex: 1;
   background-color: #6ED472;
   color: white;
   border: none;
   border-radius: 8px;
-  padding: 1rem 2.5rem;
+  padding: 1rem;
   font-size: 1rem;
   transition: all 0.3s;
 }

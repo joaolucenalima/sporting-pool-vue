@@ -1,5 +1,6 @@
 <script setup>
-import PrimaryButton from '@/components/PrimaryButton.vue';
+import CreatePoolButton from '@/components/CreatePoolButton.vue';
+import EnterWithCodeButton from '@/components/EnterWithCodeButton.vue';
 import ProjectLogo from '@/components/ProjectLogo.vue';
 </script>
 
@@ -22,8 +23,8 @@ import ProjectLogo from '@/components/ProjectLogo.vue';
       </p>
 
       <div class="buttons">
-        <PrimaryButton :onClick="() => { console.log('botão clicado!') }" text="Entrar com código" />
-        <PrimaryButton :onClick="() => { console.log('botão clicado!') }" text="Criar bolão" />
+        <EnterWithCodeButton />
+        <CreatePoolButton />
       </div>
     </section>
 
@@ -40,7 +41,8 @@ header {
 
 .buttons {
   display: flex;
-  gap: 2rem;
+  justify-content: space-between;
+  gap: 3rem;
   margin-top: 5rem;
 }
 
@@ -72,5 +74,6 @@ main {
 .main-text {
   font-size: 56px;
   font-weight: 600;
+  line-height: 120%;
 }
 </style>
