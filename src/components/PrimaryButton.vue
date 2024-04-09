@@ -15,12 +15,11 @@ defineProps({
 
 <style scoped>
 button {
-  flex: 1;
   background-color: #6ED472;
   color: white;
   border: none;
   border-radius: 8px;
-  padding: 1rem;
+  padding: 1rem 3rem;
   font-size: 1rem;
   transition: all 0.3s;
 }

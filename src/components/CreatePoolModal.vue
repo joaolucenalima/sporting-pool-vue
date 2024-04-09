@@ -16,33 +16,36 @@ const closeModal = () => {
 </script>
 
 <template>
-  <PrimaryButton @click="openModal()" text="Criar bolão" />
+  <div>
+    <PrimaryButton @click="openModal()" text="Criar bolão" />
 
-  <ModalComponent :isOpen="isModalOpened" @modal-close="closeModal" @submit="">
-    <template #title>
-      <span>Crie um novo bolão</span>
-    </template>
-    <template #form>
-      <div class="form-content">
-        <div class="form-field">
-          <label>Nome do bolão</label>
-          <InputText placeholder="Ex.: Bolão da firma" />
+    <ModalComponent :isOpen="isModalOpened" @modal-close="closeModal" @submit="">
+      <template #title>
+        <span>Crie um novo bolão</span>
+      </template>
+
+      <template #form>
+        <div class="form-content">
+          <div class="form-field">
+            <label>Nome do bolão</label>
+            <InputText placeholder="Ex.: Bolão da firma" />
+          </div>
+
+          <div class="form-field">
+            <label>Código do bolão</label>
+            <InputText placeholder="AAAA-BBBB-CCCC-DDDD" />
+          </div>
+
+          <div class="form-field">
+            <label>Máx. participantes</label>
+            <input type="number" name="participantes" value="10" min="2" max="30">
+          </div>
+
+          <PrimaryButton text="Criar" style="align-self: flex-end; width: 30%; margin-top: -1rem;" />
         </div>
-
-        <div class="form-field">
-          <label>Código do bolão</label>
-          <InputText placeholder="AAAA-BBBB-CCCC-DDDD" />
-        </div>
-
-        <div class="form-field">
-          <label>Máx. participantes</label>
-          <input type="number" name="participantes" value="10" min="2" max="30">
-        </div>
-
-        <PrimaryButton text="Criar" style="align-self: flex-end; width: 30%; margin-top: -1rem;" />
-      </div>
-    </template>
-  </ModalComponent>
+      </template>
+    </ModalComponent>
+  </div>
 </template>
 
 <style scoped>

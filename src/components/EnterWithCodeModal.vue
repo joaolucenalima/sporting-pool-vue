@@ -16,20 +16,22 @@ const closeModal = () => {
 </script>
 
 <template>
-  <PrimaryButton @click="openModal" text="Entrar com código" />
+  <div>
+    <PrimaryButton @click="openModal" text="Entrar com código" />
 
-  <ModalComponent :isOpen="isModalOpened" @modal-close="closeModal" @submit="">
-    <template #title>
-      <span>Digite um código para participar de um bolão</span>
-    </template>
+    <ModalComponent :isOpen="isModalOpened" @modal-close="closeModal" @submit="">
+      <template #title>
+        <span>Digite um código para participar de um bolão</span>
+      </template>
 
-    <template #form>
-      <div class="form-content">
-        <InputText placeholder="AAAA-BBBB-CCCC-DDDD" />
-        <PrimaryButton text="Entrar" />
-      </div>
-    </template>
-  </ModalComponent>
+      <template #form>
+        <div class="form-content">
+          <InputText placeholder="AAAA-BBBB-CCCC-DDDD" />
+          <PrimaryButton text="Entrar" />
+        </div>
+      </template>
+    </ModalComponent>
+  </div>
 </template>
 
 <style scoped>

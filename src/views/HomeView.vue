@@ -41,7 +41,6 @@ header {
 
 .buttons {
   display: flex;
-  justify-content: space-between;
   gap: 3rem;
   margin-top: 5rem;
 }
